@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>王红雁 日考03.13</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        .wrap{
+            width: 300px;
+            height: 300px;
+            border:1px solid #ccc;
+            margin:10px auto;
+
+        }
+        .title{
+            height:50px;
+        }
+        .title li{
+            width:98px;
+            height:50px;
+            text-align: center;
+            border:1px solid #ccc;
+            line-height: 50px;
+            float:left;
+            background:skyblue;
+        }
+        .title li.active{
+            background: hotpink;
+        }
+        .content li{
+            width:300px;
+            height: 250px;
+            text-align: center;
+            line-height: 250px;
+            display: none;
+        }
+        .content li.active{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+<div class='wrap'>
+    <div class='title'>
+        <li class='active'>1</li>
+        <li>2</li>
+        <li>3</li>
+    </div>
+    <ul class='content'>
+        <li class='active'>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</div>
+<!-- 核心代码 -->
+<script src='js/xuan.js'></script>
+<script>
+
+new Xuan({
+    title:document.querySelector('.title'),
+    content:document.querySelector('.content')
+
+})
+
+
+
+
+</script>
+</body>
+</html>
